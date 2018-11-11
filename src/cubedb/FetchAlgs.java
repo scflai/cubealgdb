@@ -9,8 +9,11 @@ public class FetchAlgs {
 	public static void main(String [] args)throws FileNotFoundException {
 		importAlgs();
 	}
-	public static void importAlgs()throws FileNotFoundException {
+	public static ArrayList<String> importAlgs()throws FileNotFoundException {
+		//windows
 		Scanner s = new Scanner(new File("C:\\Users\\sampc\\Documents\\cubealgdb\\algs.txt"));
+		//linux
+		//Scanner s = new Scanner(new File("/home/sam/Documents/cubealgdb/algs.txt"));
 		ArrayList<String> list = new ArrayList<String>();
 		while (s.hasNext()){
 		    list.add(s.nextLine());
@@ -28,6 +31,6 @@ public class FetchAlgs {
 					algorithm += alg.charAt(j);
 				}
 			} newList.add(algorithm);
-		}
+		} return newList;
 	}
 }
