@@ -61,6 +61,7 @@ public class Db {
 			String var2 = algList.get(j);
 			int var3 = 100;
 			try {
+				//Connection con = getConnection();
 				PreparedStatement create = con.prepareStatement("INSERT INTO algorithms (img, alg, rating) VALUES('"+var1+"', '"+var2+"', '"+var3+"')");
 				create.executeUpdate();	
 				System.out.println(algList.get(j) + " Inserted");
